@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Tarea 1: Luis Arturo Gorocica Medina</h2>
+
+<p>Declarar 5 objetos, cada uno con cualidades y 2 metodos.</p>
+
+<p id="demo"></p>
+
+<script>
+
+var soda = {
+  brand: "CocaColaCompany",
+  brandVariant: "Fanta",
+  color: "Orange",
+  contentInMl: 330,
+  fullProfile : function() {
+    return "This is a "+ this.brandVariant +" which belongs to "+ this.brand +" and its content in mililitres is " + this.contentInMl+".<br>";
+  }
+};
+var ropa= {
+    tipo:"bata",
+    color:"blanco",
+    material:"seda",
+    presentacionBata: function() {
+        return "Ésta es una prenda de tipo "+this.tipo+", cuyo color es "+this.color+" y está hecha de "+this.material+".<br>";
+    }
+};
+var lampara= {
+    tipo:"rústica",
+    color:"caoba",
+    precio: 360,
+    lampInfo: function() {
+        return "Ésta es una lampara "+this.tipo+" de color "+this.color+ " cuyo precio es de $"+this.precio+".<br>";
+    }
+
+};
+var telefono= {
+    marca:"Samsung",
+    modelo:"Galaxy S20 Ultra",
+    ramMemo: "16 GB",
+    camara: "1080P",
+    telInfo:function() {
+        return "Éste es un "+this.modelo+" de la marca "+this.marca+" y cuenta con "+this.ramMemo+" de RAM y una cámara de "+this.camara+".<br>";
+    }
+};
+var xbox= {
+    enterprise: "Microsoft",
+    consoleType: "Xbox One",
+    storage: "1 T",
+    xboxInfo: function() {
+        return "This is an "+this.consoleType+", thi console was creates by"+this.enterprise+" and cn store up to "+this.storage+".";
+    }
+};
+
+
+document.getElementById("demo").innerHTML = soda.fullProfile() + ropa.presentacionBata() + lampara.lampInfo()+telefono.telInfo()+xbox.xboxInfo();
+
+</script>
+
+</body>
+</html>
