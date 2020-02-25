@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Luis Arturo Gorocica Medina</h2>
+
+<p>Tarea 2: Crear una clase y con ella crear 5 objetos.</p>
+
+<p id="demo"></p>
+
+<script>
+class CellPhone {
+  constructor(fM,brand,type) {
+    this.familyMember = fM,
+    this.cellModel = brand,
+    this.cellVersion = type;
+  }
+  present() {
+    return "Mi "+ this.familyMember + ' tiene un ' + this.cellModel + " " +this.cellVersion+".<br>";
+  }
+}
+
+myDadsPhone = new CellPhone("papá","Galaxy","S20 Ultra")
+myMomsPhone = new CellPhone("mamá","Iphone","11")
+mySister1Phone = new CellPhone("hermana Michelle","Iphone","SE")
+mySister2Phone = new CellPhone("hermana Estefania","Iphone","6")
+myBfsPhone = new CellPhone("mejor amigo","Galaxy","S10+")
+
+
+document.getElementById("demo").innerHTML = myDadsPhone.present()+myMomsPhone.present()+mySister1Phone.present()+
+mySister2Phone.present()+myBfsPhone.present();
+</script>
+
+</body>
+</html>
