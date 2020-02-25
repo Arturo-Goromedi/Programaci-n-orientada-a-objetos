@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h2>Luis Arturo Gorocica Medina</h2>
+
+  <p>Tarea 3: Crear una clase y con ella creas un objeto desde una extensión.</p>
+
+<p id="demo"></p>
+
+<script>
+class CellPhone {
+  constructor(brand) {
+    this.cellname = brand;
+  }
+  present() {
+    return 'I have a ' + this.cellname;
+  }
+}
+
+class Model extends CellPhone {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+mycell = new Model("Samsung", "Galaxy s20 Ultra");
+document.getElementById("demo").innerHTML = mycell.show();
+</script>
+
+</body>
+</html>
